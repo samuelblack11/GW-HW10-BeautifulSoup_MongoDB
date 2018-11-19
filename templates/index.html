@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+
+  <div class="container-fluid text-center">
+
+    <a class="navbar-brand navbar-header">
+      <font size = '6'><strong>Mission to Mars</strong></font>
+      <br>
+      <br>
+      <a class="btn btn-primary btn-sm" href="/scrape" role="button">Scrape New Data</a></a>
+    </div>
+  </nav>
+
+
+  <h2 class = 'text-info'><a href="hemispheres.html"><font size='4'>View the hemispheres</font></a> <font size = '.5' ></font></h2>
+  
+
+  <div class="col-md-5 panel panel-default summ_bg" >
+  <h1 class = 'text-info'><font size = '5' color= 'black' > Featured Mars Image </font></h1>
+    <img src="{{mars_dict.featured_image}}" class = "img-fluid" alt="..."></img>
+</div>
+
+<div class = "col-sm-6 panel panel-default summ_bg float_right"> 
+    <h2><font size = '5'>The current weather on Mars is: </font></h2>
+    <h3><font size = '4'>{{ mars_dict.weather }}</font> </h3>
+  </div>
+  <div class="col-md-6 panel panel-default summ_bg float_right">
+  <table class = "table table-striped" style = "width:100%">
+    <tr><th>Category</th><th>Measurement</th>
+     <tr><td>Equatorial Diameter</td><td> {{ mars_dict.eq_diameter }}</td></tr>
+     <tr><td>Polar Diameter</td><td> {{ mars_dict.polar_diameter }}</td></tr>
+     <tr><td>Mass</td><td> {{ mars_dict.mass }}</td></tr>
+     <tr><td>Moons</td><td> {{ mars_dict.moons }}</td></tr>
+     <tr><td>Orbit Distance</td><td> {{ mars_dict.orbit_distance }}</td></tr>
+     <tr><td>Orbit Period</td><td> {{ mars_dict.orbit_period }}</td></tr>
+     <tr><td>Surface Temperature</td><td> {{ mars_dict.surface_temp }}</td></tr>
+     <tr><td>First Record</td><td> {{ mars_dict.first_record }}</td></tr>
+     <tr><td>Recorded By</td><td> {{ mars_dict.recorded_by }}<</td></tr>
+     </table>
+  </div>
+    <br>
+
+   </div>
+</body>
+
+<style>
+.img-fluid {
+  max-width: 100%;
+  height: 80%;
+}
+
+.navbar-header {
+    float: left;
+    margin: 15px;
+    text-align: center;
+    color:black;
+    width: 100%;
+}
+.navbar-brand {float:none;}
+
+.float_right{
+  float:right
+}
+.float_top{
+  float:top;
+}
+
+
+.panel {
+    background-color: whitesmoke;
+}
+
+
+</style>
+
+</html>
+
